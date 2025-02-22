@@ -117,3 +117,7 @@ nav li{
     border: 1px solid #a66;
     margin-top: 10px;
   }
+
+  img{
+    width: 8px;
+  }
