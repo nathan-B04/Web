@@ -9,4 +9,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 1px 1px 1px black;
+    margin: auto;
+    color: white;
+    border-radius: 5%;
+    border: 1px solid darkred;
+    background: linear-gradient(135deg, transparent, rgba(0,0,0,0.3));
   }
