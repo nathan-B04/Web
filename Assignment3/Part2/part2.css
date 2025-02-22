@@ -2,7 +2,11 @@ html {
     font-family: sans-serif;
   }
   
-div{
-    
-}
-  
+  div{
+    width: 200px;
+    height: 150px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
