@@ -8,6 +8,8 @@ body {
   img {
       max-width: 100%;
       display: block;
+      float: left;
+      margin-right: 20px;
   }
   
   .logo {
@@ -51,8 +53,20 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 250px;
   }
 
   .feature {
       width: 200px;
+  }
+
+  article{
+    float: left;
+    width: 700px;
+  }
+
+  aside{
+    float: right;
   }
