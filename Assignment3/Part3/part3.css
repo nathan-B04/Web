@@ -43,3 +43,43 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+
+  html{
+    font-size: 10px;
+  }
+
+  body{
+    font-family: 'Arial', Times, serif;
+    line-height: 15px;
+    letter-spacing: 0.2px;
+    word-spacing: .6px;
+  }
+  
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+  }
+
+  h2{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .3px;
+  }
+
+  section{
+    text-indent: 20px;
+  }
+
+  a:link,
+  a:visited {
+    color: #a66;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #a66;
+  }
+
+  a:focus{
+    color: #a66
+  }
+  
