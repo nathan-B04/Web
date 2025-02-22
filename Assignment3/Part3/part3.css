@@ -69,6 +69,9 @@
     text-indent: 20px;
   }
 
+  a{
+    text-decoration: underline;
+  }
   a:link,
   a:visited {
     color: #a66;
@@ -77,9 +80,13 @@
   a:hover {
     text-decoration: none;
     color: #a66;
+    text-decoration: none;
   }
 
   a:focus{
-    color: #a66
+    text-decoration: none;
+    color: #a66;
+    outline: none;
   }
-  
+
+    
