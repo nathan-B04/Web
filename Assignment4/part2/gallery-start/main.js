@@ -26,4 +26,7 @@ newImage.setAttribute('src', xxx);
 newImage.setAttribute('alt', xxx);
 thumbBar.appendChild(newImage);
 
+newImage.addEventListener('CLick', () => {
+    displayedImage.setAttribute('src', `images/${fileNamesArray}`);
+})
 /* Wiring up the Darken/Lighten button */
