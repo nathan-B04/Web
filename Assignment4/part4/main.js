@@ -75,6 +75,44 @@ class Ball {
       }            
               
   }
+
+  class EvilCircle extends Shape {
+    constructor(x, y) {
+      // Pass x, y, and velocities to the Shape constructor
+      super(x, y, 20, 20);
+  
+      // Set specific values for color and size
+      this.color = 'white';
+      this.size = 10;
+  
+      // Set up movement logic
+      window.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "a":
+            this.x -= this.velX;
+            break;
+          case "d":
+            this.x += this.velX;
+            break;
+          case "w":
+            this.y -= this.velY;
+            break;
+          case "s":
+            this.y += this.velY;
+            break;
+        }
+      });
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = this.color;
+      ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+      ctx.stroke();
+  }
+  }
+  
   
   const balls = [];
 
@@ -106,6 +144,5 @@ function loop() {
   
     requestAnimationFrame(loop);
   }
-  
-  
+
   loop();
