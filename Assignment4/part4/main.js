@@ -2,19 +2,22 @@
 // File: main.js
 // Date: April 1 2025
 
-// setup canvas
+// Setup canvas
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+
+// Reference the ball count <span> in the HTML
+const ballCounter = document.getElementById("ballCount");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-// function to generate random number
+// Function to generate random number
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function to generate random color
+// Function to generate random color
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
@@ -39,6 +42,8 @@ class Ball extends Shape {
   }
 
   draw() {
+    if (!this.exists) return;
+
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -120,14 +125,24 @@ class EvilCircle extends Shape {
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
+          ballCount--;
+          updateBallCount();
         }
       }
     }
   }
 }
 
-// Create balls
+// Ball Tracking Variables
 const balls = [];
+let ballCount = 0;
+
+// Function to update ball count display
+function updateBallCount() {
+  ballCounter.textContent = ballCount;
+}
+
+// Create balls
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
@@ -138,8 +153,12 @@ while (balls.length < 25) {
     randomRGB(),
     size
   );
+
   balls.push(ball);
+  ballCount++;
 }
+
+updateBallCount();
 
 // Create Evil Circle
 const evilCircle = new EvilCircle(width / 2, height / 2);
