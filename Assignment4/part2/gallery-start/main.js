@@ -1,5 +1,6 @@
 // Name: Nathan Bricknell
 // Date: March 31, 2025
+// Purpose: Create a clickable photo array which allows you to darken and lighten the images
 
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
