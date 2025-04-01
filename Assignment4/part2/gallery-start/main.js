@@ -26,9 +26,9 @@ for (const pictures of fileNamesArray) {
     newImage.setAttribute('alt', AltNames[pictures]);
     thumbBar.appendChild(newImage);
 
-    newImage.addEventListener('click', e => {
-      displayedImage.src = e.target.src;
-      displayedImage.alt = e.target.alt;
+    newImage.addEventListener('click', () => {
+      displayedImage.src = newImage.src;
+      displayedImage.alt = newImage.alt;
     });
   }
   
