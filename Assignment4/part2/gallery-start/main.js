@@ -13,11 +13,11 @@ const fileNamesArray = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', "pic4.jpg", 'pic5.jp
 
 /* Declaring the alternative text for each image file */
 const AltNames = {
-    'pic1.jpg': 'Picture 1',
-    'pic2.jpg': 'Picture 2',
-    'pic3.jpg': 'Picture 3',
-    'pic4.jpg': 'Picture 4',
-    'pic5.jpg': 'Picture 5'
+    'pic1.jpg': 'Close up of an eye',
+    'pic2.jpg': 'Abstract waves',
+    'pic3.jpg': 'Flowers',
+    'pic4.jpg': 'Egyption Tabloid',
+    'pic5.jpg': 'Moth'
 };
 /* Looping through images */
 
