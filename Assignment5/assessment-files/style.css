@@ -173,6 +173,10 @@ article {
   font-family: 'Arial', Helvetica;
   font-size: 130%;
 }
+
+.audio-transcript{
+  font-family: 'Arial', Helvetica;
+}
 /* Comments styling */
 
 .comments {
